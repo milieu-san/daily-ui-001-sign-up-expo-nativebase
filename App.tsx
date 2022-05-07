@@ -7,14 +7,11 @@ import {
   HStack,
   Box,
   Text,
-  IconButton,
   Button,
-  Icon,
   Link,
 } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
-
-import { FontAwesome } from '@expo/vector-icons';
+import CustomIconButton from './src/components/CustomIconButton';
 
 const config = {
   dependencies: {
@@ -47,8 +44,6 @@ const App = () => {
           bg={{
             linearGradient: {
               colors: ['violet.800', 'indigo.800'],
-              start: [0, 0],
-              end: [1, 0],
             },
           }}
           borderRadius={25}
@@ -59,54 +54,10 @@ const App = () => {
               Sign up with
             </Text>
             <HStack space={6} justifyContent="center">
-              <IconButton
-                justifyContent="center"
-                alignItems="center"
-                icon={<Icon as={FontAwesome} name="apple" />}
-                borderRadius="full"
-                _icon={{
-                  color: 'orange.500',
-                  size: '2xl',
-                }}
-                _pressed={{
-                  bg: 'orange.600:alpha.20',
-                }}
-              />
-              <IconButton
-                icon={<Icon as={FontAwesome} name="facebook" />}
-                borderRadius="full"
-                _icon={{
-                  color: 'orange.500',
-                  size: '2xl',
-                }}
-                _pressed={{
-                  bg: 'orange.600:alpha.20',
-                }}
-              />
-              <IconButton
-                justifyContent="center"
-                alignItems="center"
-                icon={<Icon as={FontAwesome} name="google" />}
-                borderRadius="full"
-                _icon={{
-                  color: 'orange.500',
-                  size: '2xl',
-                }}
-                _pressed={{
-                  bg: 'orange.600:alpha.20',
-                }}
-              />
-              <IconButton
-                icon={<Icon as={FontAwesome} name="twitter" />}
-                borderRadius="full"
-                _icon={{
-                  color: 'orange.500',
-                  size: '2xl',
-                }}
-                _pressed={{
-                  bg: 'orange.600:alpha.20',
-                }}
-              />
+              <CustomIconButton  iconName="apple" />
+              <CustomIconButton  iconName="facebook" />
+              <CustomIconButton  iconName="google" />
+              <CustomIconButton  iconName="twitter" />
             </HStack>
             <Box justifyContent="center" alignItems="center">
               <Text color="white" fontSize="sm">
@@ -118,6 +69,7 @@ const App = () => {
                 variant="outline"
                 colorScheme="orange"
                 borderColor="orange.500"
+                borderRadius="full"
                 _text={{
                   fontSize: 'md',
                   fontWeight: 'bold',
