@@ -3,11 +3,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import React from 'react';
 
 interface Prop {
-  iconName: string
+  iconName: string;
 }
 
 const CustomIconButton = (props: Prop) => {
-  const { iconName } = props
+  const { iconName } = props;
 
   return (
     <IconButton
@@ -23,7 +23,7 @@ const CustomIconButton = (props: Prop) => {
         bg: 'orange.600:alpha.20',
       }}
     />
-  )
-}
+  );
+};
 
-export default CustomIconButton
+export default CustomIconButton;

@@ -34,7 +34,11 @@ const App = () => {
         <Box flex={1} justifyContent="center">
           <VStack space={5} alignItems="center">
             <Heading size="lg" color="gray.100">
-              Welcome to Pixel Gallery!
+              Welcome to <Text color="pink.400">P</Text>
+              <Text color="red.400">i</Text>
+              <Text color="yellow.400">x</Text>
+              <Text color="green.400">e</Text>
+              <Text color="blue.400">l</Text> Gallery!
             </Heading>
           </VStack>
         </Box>
@@ -54,10 +58,10 @@ const App = () => {
               Sign up with
             </Text>
             <HStack space={6} justifyContent="center">
-              <CustomIconButton  iconName="apple" />
-              <CustomIconButton  iconName="facebook" />
-              <CustomIconButton  iconName="google" />
-              <CustomIconButton  iconName="twitter" />
+              <CustomIconButton iconName="apple" />
+              <CustomIconButton iconName="facebook" />
+              <CustomIconButton iconName="google" />
+              <CustomIconButton iconName="twitter" />
             </HStack>
             <Box justifyContent="center" alignItems="center">
               <Text color="white" fontSize="sm">
