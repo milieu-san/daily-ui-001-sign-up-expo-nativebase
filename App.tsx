@@ -34,11 +34,11 @@ const App = () => {
         <Box flex={1} justifyContent="center">
           <VStack space={5} alignItems="center">
             <Heading size="lg" color="gray.100">
-              Welcome to <Text color="pink.400">P</Text>
-              <Text color="red.400">i</Text>
-              <Text color="yellow.400">x</Text>
-              <Text color="green.400">e</Text>
-              <Text color="blue.400">l</Text> Gallery!
+              Welcome to <Text color="pink.300">P</Text>
+              <Text color="red.300">i</Text>
+              <Text color="yellow.300">x</Text>
+              <Text color="green.300">e</Text>
+              <Text color="blue.300">l</Text> Gallery!
             </Heading>
           </VStack>
         </Box>
