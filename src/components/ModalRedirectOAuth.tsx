@@ -3,12 +3,12 @@ import React from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 
 interface Props {
-  isOpened: boolean,
-  close: () => void
+  isOpened: boolean;
+  close: () => void;
 }
 
 const ModalRedirectOAuth = (props: Props) => {
-  const { isOpened, close } = props
+  const { isOpened, close } = props;
 
   return (
     <Modal isOpen={isOpened} onClose={close} size="md">
@@ -19,13 +19,13 @@ const ModalRedirectOAuth = (props: Props) => {
           <Center h="40px">
             <HStack justifyContent="center" space={1}>
               <Text color="orange.500">Redirecting...</Text>
-              <Spinner color="orange.500"/>
+              <Spinner color="orange.500" />
             </HStack>
           </Center>
         </TouchableWithoutFeedback>
       </Modal.Content>
     </Modal>
-  )
-}
+  );
+};
 
-export default ModalRedirectOAuth
+export default ModalRedirectOAuth;

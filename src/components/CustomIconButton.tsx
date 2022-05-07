@@ -4,7 +4,7 @@ import React from 'react';
 
 interface Props {
   iconName: string;
-  onPress: () => void
+  onPress: () => void;
 }
 
 const CustomIconButton = (props: Props) => {
