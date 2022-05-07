@@ -1,9 +1,13 @@
-# NativeBase TypeScript Expo Template
+## daily-ui-001-sign-up-expo-nativebase
 
-The official NativeBase TypeScript template for [Expo](https://docs.expo.io/)
 
-## Usage
+### Overview
 
-```sh
-expo init my-app --template @native-base/expo-template-typescript
-```
+- [Parent repo](https://github.com/miball0202/daily-ui)
+- [DailyUI](https://www.dailyui.co/) 001 SignUp
+
+### Tech Stack
+
+- expo
+- nativebase
+
