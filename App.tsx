@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Center,
   Heading,
@@ -12,6 +12,7 @@ import {
 } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 import CustomIconButton from './src/components/CustomIconButton';
+import ModalRedirectOAuth from './src/components/ModalRedirectOAuth';
 
 const config = {
   dependencies: {
@@ -20,8 +21,17 @@ const config = {
 };
 
 const App = () => {
+  const [showRedirectModal, setShowRedirectModal] = useState<boolean>(false)
+
+  const openRedirectModal = () => setShowRedirectModal(true)
+  const closeRedirectModal = () => setShowRedirectModal(false)
+
   return (
     <NativeBaseProvider config={config}>
+      <ModalRedirectOAuth
+        isOpened={showRedirectModal}
+        close={closeRedirectModal}
+      />
       <Box safeAreaTop />
       <Box
         flex={1}
@@ -32,7 +42,7 @@ const App = () => {
         }}
       >
         <Box flex={1} justifyContent="center">
-          <VStack space={5} alignItems="center">
+          <VStack space={2} alignItems="center">
             <Heading size="lg" color="gray.100">
               Welcome to <Text color="pink.300">P</Text>
               <Text color="red.300">i</Text>
@@ -58,10 +68,10 @@ const App = () => {
               Sign up with
             </Text>
             <HStack space={6} justifyContent="center">
-              <CustomIconButton iconName="apple" />
-              <CustomIconButton iconName="facebook" />
-              <CustomIconButton iconName="google" />
-              <CustomIconButton iconName="twitter" />
+              <CustomIconButton iconName="apple" onPress={openRedirectModal}/>
+              <CustomIconButton iconName="facebook" onPress={openRedirectModal}/>
+              <CustomIconButton iconName="google" onPress={openRedirectModal}/>
+              <CustomIconButton iconName="twitter" onPress={openRedirectModal}/>
             </HStack>
             <Box justifyContent="center" alignItems="center">
               <Text color="white" fontSize="sm">

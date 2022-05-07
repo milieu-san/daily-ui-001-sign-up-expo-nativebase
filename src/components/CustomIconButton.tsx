@@ -2,12 +2,13 @@ import { Icon, IconButton } from 'native-base';
 import { FontAwesome } from '@expo/vector-icons';
 import React from 'react';
 
-interface Prop {
+interface Props {
   iconName: string;
+  onPress: () => void
 }
 
-const CustomIconButton = (props: Prop) => {
-  const { iconName } = props;
+const CustomIconButton = (props: Props) => {
+  const { iconName, onPress } = props;
 
   return (
     <IconButton
@@ -22,6 +23,7 @@ const CustomIconButton = (props: Prop) => {
       _pressed={{
         bg: 'orange.600:alpha.20',
       }}
+      onPress={onPress}
     />
   );
 };
